@@ -14,8 +14,12 @@ const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3030;
 app.get('/', function (req, res) {
-       res.send('houssein!!')
+    res.send('houssein!!');
  })
+ app.get('/students', function (req, res) {
+    let data = [{id:1, name:'houssein'},{id:2, name:'sophie'},{id:3, name:'ali'}]
+    res.send( data);
+})
 
 // your code
 
